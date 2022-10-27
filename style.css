@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+body {
+    background-color: #f6f5f7;
+    font-family: 'montserrat', sans-serif;
+    text-align: center;
+}
+
+#contenedor {
+    width: 900px;
+    height: 500px;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+    0 10px 10px rgba(0,0,0,0.22);
+}
+
+#formulario {
+    background-color: white;
+    color: rgb(80, 78, 78);
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+#detalle {
+    background-color: #9E90A2;
+    color: #f6f5f7;
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+.contenido { /*centrar div verticalmente*/
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);
+    overflow: hidden;
+    padding: 20px;
+}
+
+input {
+    background-color: #efebe7;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    font-family: 'montserrat', sans-serif;
+    width: 70%;
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 12px 30px;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'montserrat', sans-serif;
+    background-color: #9E90A2;
+    border: none;
+    border-radius: 20px;
+    color:#f3f1f6;
+    letter-spacing: 1px;
+    transition: transform 20ms ease-in;
+}
+
+button:hover{
+    box-shadow: 0 4px 18px rgba(0,0,0,0.25), 
+    0 5px 5px rgba(0,0,0,0.22);
+}
+
+button:active {
+	transform: scale(0.95);
+}
+
+#error{
+    color: brown;
+    font-weight: bold;
+    display: none;
+}
+
+.volumen{
+    color:brown;
+    font-size: 25px;
+    font-weight: bold;
+    display: none;
+}
+
+.metodo{
+    color:#c45252;
+    font-size: 15px;
+    font-weight: bold;
+    display: none;
+}
