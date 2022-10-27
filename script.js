@@ -2,7 +2,6 @@ const CALCULAR = document.getElementById('calcular');
 const ERROR = document.getElementById('error');
 const FLU = document.getElementById('flu');
 const MAN = document.getElementById('man');
-const MAN2 = document.getElementById('man2');
 const MET = document.getElementById('met');
 
 CALCULAR.addEventListener('click', () => {
@@ -11,40 +10,35 @@ CALCULAR.addEventListener('click', () => {
     if (document.getElementById('peso').value>30){
         ERROR.style.display = 'none'
         let flujo = calcFlujo(DATO);
-        FLU.innerHTML = flujo+ ' cc';
         flujo= res1;
         let flujo2= res2;
         let mantenimiento = flujo/24
-        let mantenimiento2 = (flujo/24)*1.5;
+        let mantenimiento2 = mantenimiento*1.5;
         let mantenimiento3 = flujo2/24
-        let mantenimiento4 = (flujo2/24)*1.5;
-        MAN.innerHTML = parseInt(mantenimiento)+ ' o '+parseInt(mantenimiento2)+ ' cc/hr';
-        MAN2.innerHTML = 'm+m/2 - ' + parseInt(mantenimiento3) + ' o '+parseInt(mantenimiento4)+ ' cc/hr';
+        let mantenimiento4 = mantenimiento3*1.5;
+        FLU.innerHTML = parseInt(mantenimiento)+ ' o '+parseInt(mantenimiento2)+ ' cc/hr';
+        MAN.innerHTML = 'm+m/2 ' + parseInt(mantenimiento3) + ' o '+parseInt(mantenimiento4)+ ' cc/hr';
         MET.innerHTML= 'Método SC';
         FLU.style.display = 'block';
         MET.style.display = 'block';
         MAN.style.display = 'block';
-        MAN2.style.display = 'block';
         
     }else if (DATO > 0){
         ERROR.style.display = 'none'
         let flujo = calcFlujo(DATO);
         let mantenimiento = flujo/24
-        let mantenimiento2 = (flujo/24)*1.5;
-        FLU.innerHTML = flujo + ' cc';
-        MAN.innerHTML = parseInt(mantenimiento)+ ' cc/hr';
-        MAN2.innerHTML = 'm+m/2 - ' + parseInt(mantenimiento2) + ' cc/hr';
+        let mantenimiento2 = mantenimiento*1.5;
+        FLU.innerHTML = parseInt(mantenimiento)+ ' cc/hr';
+        MAN.innerHTML = 'm+m/2 ' + parseInt(mantenimiento2) + ' cc/hr';
         MET.innerHTML= 'Método Holliday-Segar'
         FLU.style.display = 'block';
         MAN.style.display = 'block';
-        MAN2.style.display = 'block';
         MET.style.display = 'block';
     } 
     else {
         ERROR.style.display = 'block';
         FLU.style.display = 'none';
         MAN.style.display = 'none';
-        MAN2.style.display = 'none';
         MET.style.display = 'none';
     }
 })

@@ -8,7 +8,7 @@ body {
 
 #contenedor {
     width: 900px;
-    height: 500px;
+    height: 460px;
     position: absolute;
     inset: 0;
     margin: auto;
@@ -83,12 +83,14 @@ button:active {
     color:brown;
     font-size: 25px;
     font-weight: bold;
+    line-height: 12px;
     display: none;
 }
 
-.metodo{
+#met{
     color:#c45252;
     font-size: 15px;
     font-weight: bold;
+    line-height: 25px;
     display: none;
 }
